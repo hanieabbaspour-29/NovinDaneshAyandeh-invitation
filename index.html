@@ -5,7 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="theme-color" content="#761819">
+  <meta name="description" content="دعوت‌نامه مراسم افتتاحیه کارخانه پیام شرکت نوین دانش آینده">
+
   <title>افتتاحیه کارخانه پیام | نوین دانش آینده</title>
+
+  <!-- Vazirmatn from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -13,335 +21,428 @@
     }
 
     :root {
-      --wine: #761819;
-      --cream: #F8F3E9;
-      --gold: #D9C69A;
+      --background: #761819;
+      --text: #ffffff;
+      --text-muted: #f0dada;
+      --accent: #e7c9a0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      background: var(--wine);
-      color: var(--cream);
-      font-family: Tahoma, Arial, sans-serif;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--text);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
       line-height: 2;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    video {
+      max-width: 100%;
     }
 
     .page {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 24px 5%;
+      padding: 28px 36px 50px;
     }
 
-    /* لوگوی بالای صفحه */
+    /* Company logo at the top */
 
     .header {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      min-height: 100px;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    .top-logo {
-      width: 150px;
-      max-width: 45%;
-      height: auto;
+    .logo-top {
+      display: block;
+      width: 125px;
+      max-height: 100px;
       object-fit: contain;
+      object-position: right center;
     }
 
-    .logo-placeholder {
-      color: var(--gold);
-      font-size: 13px;
-    }
-
-    /* عنوان مراسم */
+    /* Main heading */
 
     .main-title {
-      text-align: center;
-      font-size: clamp(23px, 4vw, 36px);
-      font-weight: 700;
-      line-height: 1.9;
-      margin: 12px 0 32px;
+      margin: 0 auto 32px;
+      max-width: 800px;
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 1.8;
+      font-weight: 800;
+      color: var(--text);
     }
 
-    /* تصویر دعوت نامه */
+    /* Invitation image */
 
     .invitation-image {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .invitation-image img {
       display: block;
       width: 100%;
       height: auto;
+      margin: 0 auto 48px;
       border: none;
       border-radius: 0;
       box-shadow: none;
     }
 
-    .image-placeholder {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--gold);
-      font-size: 15px;
-      padding: 20px;
-    }
-
-    /* توضیحات مراسم */
-
-    .details {
-      max-width: 900px;
-      margin: 48px auto 0;
-      text-align: right;
-    }
+    /* Invitation text */
 
     .description {
-      font-size: clamp(15px, 2vw, 18px);
+      max-width: 780px;
+      margin: 0 auto 54px;
+      text-align: center;
+      font-size: 17px;
       line-height: 2.5;
-      text-align: justify;
-      text-align-last: right;
+      font-weight: 400;
     }
 
-    .speakers {
-      margin-top: 36px;
+    .description p {
+      margin: 0 0 26px;
+    }
+
+    .description p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Speakers */
+
+    .speakers-section {
+      margin: 0 auto 56px;
+      max-width: 700px;
     }
 
     .section-title {
-      font-size: 20px;
+      margin: 0 0 26px;
+      font-size: 22px;
+      line-height: 1.9;
       font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 12px;
+      color: var(--accent);
     }
 
     .speaker-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px 30px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 32px;
+      padding: 0;
       margin: 0;
-      padding-right: 24px;
+      list-style: none;
     }
 
     .speaker-list li {
-      padding: 4px 0;
-      min-height: 38px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+      font-size: 16px;
+      color: var(--text);
     }
 
+    /* Event information */
+
     .event-info {
-      margin-top: 32px;
-      line-height: 2.5;
+      margin: 0 auto 54px;
+      max-width: 700px;
     }
 
     .event-info p {
-      margin: 5px 0;
+      margin: 0 0 18px;
+      font-size: 18px;
+      line-height: 2.2;
     }
+
+    .event-info strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Closing and signature */
 
     .closing {
-      margin-top: 36px;
-      line-height: 2.4;
+      margin: 0 auto 56px;
+      line-height: 2.3;
     }
 
-    .closing strong {
+    .closing p {
+      margin: 0;
+    }
+
+    .closing .respect {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .closing .manager-name {
+      font-size: 22px;
       font-weight: 800;
+      margin-bottom: 2px;
     }
 
-    /* بخش ویدیو */
+    .closing .manager-role {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    /* Video section */
 
     .video-section {
-      margin: 72px 0 0;
+      max-width: 850px;
+      margin: 0 auto 60px;
     }
 
     .video-title {
-      text-align: center;
+      margin: 0 0 24px;
       font-size: 23px;
-      margin-bottom: 24px;
+      line-height: 1.9;
+      font-weight: 700;
+      color: var(--accent);
     }
 
-    .event-video {
+    .invitation-video {
       display: block;
       width: 100%;
-      max-width: 900px;
       height: auto;
+      max-height: 520px;
       margin: 0 auto;
-      background: #000;
+      background: #000000;
       border: none;
       border-radius: 0;
       box-shadow: none;
     }
 
     .video-note {
-      text-align: center;
-      color: var(--cream);
-      opacity: 0.85;
+      margin: 16px 0 0;
+      color: var(--text-muted);
       font-size: 13px;
-      margin-top: 12px;
+      line-height: 2;
     }
 
-    /* لوگوی انتهای صفحه */
+    /* Bottom logo */
 
     .footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 55px 0 20px;
-      margin-top: 35px;
+      margin-top: 50px;
+      padding-top: 28px;
     }
 
-    .bottom-logo {
+    .logo-bottom {
       display: block;
-      width: 160px;
-      max-width: 60%;
-      height: auto;
+      width: 110px;
+      max-height: 90px;
       object-fit: contain;
     }
 
+    /* Mobile layout */
+
     @media (max-width: 600px) {
+      body {
+        font-size: 15px;
+        line-height: 2;
+      }
+
       .page {
-        padding: 16px 5%;
+        padding: 20px 18px 36px;
       }
 
       .header {
-        min-height: 65px;
-        margin-bottom: 20px;
+        margin-bottom: 26px;
       }
 
-      .top-logo {
-        width: 115px;
+      .logo-top {
+        width: 95px;
+        max-height: 75px;
+      }
+
+      .main-title {
+        font-size: 25px;
+        line-height: 1.9;
+        margin-bottom: 24px;
+      }
+
+      .invitation-image {
+        margin-bottom: 34px;
+      }
+
+      .description {
+        font-size: 15px;
+        line-height: 2.4;
+        margin-bottom: 42px;
+      }
+
+      .description p {
+        margin-bottom: 22px;
+      }
+
+      .speakers-section {
+        margin-bottom: 42px;
+      }
+
+      .section-title {
+        font-size: 20px;
+        margin-bottom: 20px;
       }
 
       .speaker-list {
         grid-template-columns: 1fr;
-        gap: 4px;
+        gap: 12px;
       }
 
-      .details {
-        margin-top: 30px;
+      .speaker-list li {
+        font-size: 15px;
+        min-height: 42px;
+      }
+
+      .event-info {
+        margin-bottom: 42px;
+      }
+
+      .event-info p {
+        font-size: 16px;
+        margin-bottom: 14px;
+      }
+
+      .closing {
+        margin-bottom: 44px;
+      }
+
+      .closing .manager-name {
+        font-size: 20px;
       }
 
       .video-section {
-        margin-top: 48px;
+        margin-bottom: 42px;
+      }
+
+      .video-title {
+        font-size: 20px;
+        margin-bottom: 18px;
       }
 
       .footer {
-        padding-top: 35px;
+        margin-top: 36px;
+        padding-top: 20px;
+      }
+
+      .logo-bottom {
+        width: 90px;
+        max-height: 75px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <main class="page">
 
+    <!-- Company logo -->
     <header class="header">
       <img
-        class="top-logo"
-        src="لوگو دیجیتال.png"
+        class="logo-top"
+        src="logo.png"
         alt="لوگوی شرکت نوین دانش آینده"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       >
-      <span class="logo-placeholder" style="display:none">
-        محل قرارگیری لوگوی مجموعه
-      </span>
     </header>
 
+    <!-- Main title -->
     <h1 class="main-title">
       افتتاحیه کارخانه پیام شرکت نوین دانش آینده
     </h1>
 
-    <section class="invitation-image">
-      <img
-        src="بنر-دیجیتال-دعوتنامه.png"
-        alt="تصویر دعوت‌نامه افتتاحیه کارخانه پیام"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      >
-      <div class="image-placeholder" style="display:none">
-        تصویر دعوت‌نامه لندسکیپ خود را با نام invitation.png آپلود کنید.
-      </div>
-    </section>
+    <!-- Invitation image -->
+    <img
+      class="invitation-image"
+      src="invitation.png"
+      alt="تصویر دعوت‌نامه افتتاحیه کارخانه پیام"
+    >
 
-    <section class="details">
+    <!-- Invitation text -->
+    <section class="description">
+      <p>
+        بدینوسیله از شما سروران ارجمند دعوت به عمل می‌آید تا با حضور ارزشمند خود در مراسم آئین افتتاحیه کارخانه شرکت نوین دانش آینده، موجب افتخار و خرسندی ما باشید.
+      </p>
 
-      <div class="description">
-        <p>
-          بدینوسیله از شما سروران ارجمند دعوت به عمل می آید تا با حضور
-          ارزشمند خود در مراسم آئین افتتاحیه کارخانه شرکت نوین دانش آینده،
-          موجب افتخار و خرسندی ما باشید.
-        </p>
-
-        <p>
-          بی تردید حضور شما مایه مباهات و دلگرمی مجموعه ما در آغاز فصلی نو
-          از مسیر تولید، توسعه و نوآوری خواهد شد.
-        </p>
-      </div>
-
-      <section class="speakers">
-        <h2 class="section-title">سخنرانان</h2>
-
-        <ol class="speaker-list">
-          <li>................................</li>
-          <li>................................</li>
-          <li>................................</li>
-          <li>................................</li>
-          <li>................................</li>
-          <li>................................</li>
-        </ol>
-      </section>
-
-      <section class="event-info">
-        <p>
-          <strong>زمان:</strong>
-          سوم آبان ۱۴۰۵، ساعت ۹ الی ۱۴
-        </p>
-
-        <p>
-          <strong>مکان:</strong>
-          منطقه ویژه اقتصادی پیام
-        </p>
-      </section>
-
-      <section class="closing">
-        <p>با احترام،</p>
-        <p>
-          <strong>محمود مقیمی</strong><br>
-          مدیرعامل شرکت نوین دانش آینده
-        </p>
-      </section>
-
-    </section>
-
-    <section class="video-section">
-      <h2 class="video-title">ویدیوی مراسم</h2>
-
-      <video class="event-video" controls playsinline preload="metadata">
-        <source src="invitation.mp4" type="video/mp4">
-        مرورگر شما از پخش این ویدیو پشتیبانی نمی‌کند.
-      </video>
-
-      <p class="video-note">
-        برای مشاهده ویدیو، دکمه پخش را انتخاب کنید.
+      <p>
+        بی‌تردید حضور شما مایه مباهات و دلگرمی مجموعه ما در آغاز فصلی نو از مسیر تولید، توسعه و نوآوری خواهد شد.
       </p>
     </section>
 
+    <!-- Speakers -->
+    <section class="speakers-section">
+      <h2 class="section-title">سخنرانان مراسم</h2>
+
+      <ul class="speaker-list">
+        <li>۱. ................................</li>
+        <li>۲. ................................</li>
+        <li>۳. ................................</li>
+        <li>۴. ................................</li>
+        <li>۵. ................................</li>
+        <li>۶. ................................</li>
+      </ul>
+    </section>
+
+    <!-- Event details -->
+    <section class="event-info">
+      <p>
+        <strong>زمان:</strong>
+        سوم آبان ۱۴۰۵، ساعت ۹ الی ۱۴
+      </p>
+
+      <p>
+        <strong>مکان:</strong>
+        منطقه ویژه اقتصادی پیام
+      </p>
+    </section>
+
+    <!-- Closing -->
+    <section class="closing">
+      <p class="respect">با احترام</p>
+      <p class="manager-name">محمود مقیمی</p>
+      <p class="manager-role">مدیرعامل شرکت نوین دانش آینده</p>
+    </section>
+
+    <!-- Video -->
+    <section class="video-section">
+      <h2 class="video-title">همراه با ما در این مسیر تازه</h2>
+
+      <video
+        class="invitation-video"
+        controls
+        playsinline
+        preload="metadata"
+      >
+        <source src="invitation.mp4" type="video/mp4">
+        مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
+      </video>
+
+      <p class="video-note">
+        برای مشاهده ویدئو، دکمه پخش را انتخاب کنید.
+      </p>
+    </section>
+
+    <!-- Bottom logo -->
     <footer class="footer">
       <img
-        class="bottom-logo"
+        class="logo-bottom"
         src="logo-bottom.png"
         alt="لوگوی نوین دانش آینده"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        loading="lazy"
       >
-      <span class="logo-placeholder" style="display:none">
-        محل قرارگیری لوگوی انتهای صفحه
-      </span>
     </footer>
 
   </main>
-
 </body>
 </html>
