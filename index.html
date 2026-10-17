@@ -54,8 +54,6 @@
       padding: 28px 36px 50px;
     }
 
-    /* Top logo */
-
     .header {
       display: flex;
       justify-content: center;
@@ -71,8 +69,6 @@
       object-position: center;
     }
 
-    /* Main heading */
-
     .main-title {
       margin: 0 auto 32px;
       max-width: 800px;
@@ -81,8 +77,6 @@
       font-weight: 800;
       color: var(--text);
     }
-
-    /* Invitation image */
 
     .invitation-image {
       display: block;
@@ -93,8 +87,6 @@
       border-radius: 0;
       box-shadow: none;
     }
-
-    /* Invitation text */
 
     .description {
       max-width: 780px;
@@ -112,8 +104,6 @@
     .description p:last-child {
       margin-bottom: 0;
     }
-
-    /* Speakers */
 
     .speakers-section {
       margin: 0 auto 56px;
@@ -148,8 +138,6 @@
       color: var(--text);
     }
 
-    /* Event information */
-
     .event-info {
       margin: 0 auto 54px;
       max-width: 700px;
@@ -165,8 +153,6 @@
       color: var(--accent);
       font-weight: 700;
     }
-
-    /* Closing */
 
     .closing {
       margin: 0 auto 56px;
@@ -193,7 +179,7 @@
       font-weight: 400;
     }
 
-    /* Video */
+    /* Aparat video */
 
     .video-section {
       max-width: 850px;
@@ -208,16 +194,25 @@
       color: var(--accent);
     }
 
-    .invitation-video {
-      display: block;
+    .aparat-video {
+      position: relative;
       width: 100%;
-      height: auto;
-      max-height: 520px;
+      aspect-ratio: 16 / 9;
       margin: 0 auto;
       background: #000000;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
+      overflow: hidden;
+    }
+
+    .aparat-video iframe {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0;
+    }
+
+    .aparat-video > div {
+      width: 100% !important;
+      height: 100% !important;
     }
 
     .video-note {
@@ -277,8 +272,6 @@
       outline-offset: 4px;
     }
 
-    /* Bottom logo */
-
     .footer {
       display: flex;
       justify-content: center;
@@ -294,7 +287,7 @@
       object-fit: contain;
     }
 
-    /* Mobile layout */
+    /* Mobile */
 
     @media (max-width: 600px) {
       body {
@@ -381,6 +374,8 @@
       }
 
       .navigation-section {
+        display: block;
+        width: 100%;
         margin-bottom: 42px;
       }
 
@@ -390,11 +385,14 @@
       }
 
       .navigation-links {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
       }
 
       .navigation-links a {
+        display: flex;
+        width: 100%;
         min-height: 54px;
         font-size: 14px;
       }
@@ -408,23 +406,6 @@
         width: 90px;
         max-height: 75px;
       }
-      @media (max-width: 600px) {
-  .navigation-section {
-    display: block;
-    width: 100%;
-  }
-
-  .navigation-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .navigation-links a {
-    display: flex;
-    width: 100%;
-  }
-}
     }
   </style>
 </head>
@@ -432,7 +413,6 @@
 <body>
   <main class="page">
 
-    <!-- Company logo -->
     <header class="header">
       <img
         class="logo-top"
@@ -441,19 +421,16 @@
       >
     </header>
 
-    <!-- Main title -->
     <h1 class="main-title">
       افتتاحیه کارخانه پیام شرکت نوین دانش آینده
     </h1>
 
-    <!-- Invitation image -->
     <img
       class="invitation-image"
       src="بنر-دیجیتال-دعوتنامه.png"
       alt="تصویر دعوت‌نامه افتتاحیه کارخانه پیام"
     >
 
-    <!-- Invitation text -->
     <section class="description">
       <p>
         بدینوسیله از شما سرور ارجمند دعوت به عمل می‌آید تا با حضور ارزشمند خود در مراسم آئین افتتاحیه کارخانه شرکت نوین دانش آینده، موجب افتخار و خرسندی ما باشید.
@@ -464,7 +441,6 @@
       </p>
     </section>
 
-    <!-- Speakers -->
     <section class="speakers-section">
       <h2 class="section-title">سخنرانان مراسم</h2>
 
@@ -479,7 +455,6 @@
       </ul>
     </section>
 
-    <!-- Event details -->
     <section class="event-info">
       <p>
         <strong>زمان:</strong>
@@ -492,26 +467,24 @@
       </p>
     </section>
 
-    <!-- Closing -->
     <section class="closing">
       <p class="respect">با احترام</p>
       <p class="manager-name">محمود مقیمی</p>
       <p class="manager-role">مدیرعامل شرکت نوین دانش آینده</p>
     </section>
 
-    <!-- Video -->
+    <!-- Aparat video -->
     <section class="video-section">
       <h2 class="video-title">همراه با ما در این مسیر تازه</h2>
 
-      <video
-        class="invitation-video"
-        controls
-        playsinline
-        preload="metadata"
-      >
-        <source src="<div id="15044101603"><script type="text/JavaScript" src="https://www.aparat.com/embed/evwffcx?data[rnddiv]=15044101603&data[responsive]=yes&titleShow=true"></script></div>">
-        مرورگر شما از پخش ویدئو پشتیبانی نمی‌کند.
-      </video>
+      <div class="aparat-video">
+        <div id="15044101603">
+          <script
+            type="text/javascript"
+            src="https://www.aparat.com/embed/evwffcx?data%5Brnddiv%5D=15044101603&amp;data%5Bresponsive%5D=yes&amp;titleShow=true"
+          ></script>
+        </div>
+      </div>
 
       <p class="video-note">
         برای مشاهده ویدئو، دکمه پخش را انتخاب کنید.
@@ -532,9 +505,9 @@
         </a>
 
         <a
-          href="https://balad.ir/location?latitude=35.767494&longitude=50.859763&zoom=16.500000#15/35.76833/50.85976"
-          target="https://balad.ir/location?latitude=35.767494&longitude=50.859763&zoom=16.500000#15/35.76833/50.85976"
-          rel="https://balad.ir/location?latitude=35.767494&longitude=50.859763&zoom=16.500000#15/35.76833/50.85976"
+          href="https://balad.ir/location?latitude=35.767494&amp;longitude=50.859763&amp;zoom=16.500000#15/35.76833/50.85976"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           مسیریابی با نرم‌افزار بلد
         </a>
@@ -549,7 +522,6 @@
       </div>
     </section>
 
-    <!-- Bottom logo -->
     <footer class="footer">
       <img
         class="logo-bottom"
